@@ -323,7 +323,7 @@ for s, dfg in f.groupby("state"):
 median_state_year_corr = float(np.median(state_year_corrs)) if state_year_corrs else float("nan")
 
 corr_df = pd.DataFrame({
-    "Corrélation": ["Année ↔ Feux (national, mensuel)", "Mois ↔ Feux (national, mensuel)", "Année ↔ Feux (médiane des États)",],
+    "Corrélation": ["Année ↔ Feux (national, mensuel),Est-ce qu’au fil des années, le nombre total de feux du Brésil a tendance à augmenter ou diminuer ?", "Mois ↔ Feux (national, mensuel),Est-ce qu’il y a un lien entre le mois de l’année et l’intensité des feux ?", "Année ↔ Feux (médiane des États),Ici on regarde État par État, puis on prend la médiane des corrélations individuelles",],
     "Spearman ρ": [round(float(corr_year), 3) if pd.notnull(corr_year) else None,
                     round(float(corr_month), 3) if pd.notnull(corr_month) else None,
                     round(float(median_state_year_corr), 3) if pd.notnull(median_state_year_corr) else None]
@@ -395,4 +395,5 @@ st.markdown(
     **Pistes d'enrichissement** : météo (précipitations, sécheresse), déforestation, surfaces agricoles, évènements El Niño/La Niña.
     """
 )
+
 
