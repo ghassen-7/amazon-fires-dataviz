@@ -395,3 +395,4 @@ st.markdown(
     **Pistes d'enrichissement** : météo (précipitations, sécheresse), déforestation, surfaces agricoles, évènements El Niño/La Niña.
     """
 )
+
