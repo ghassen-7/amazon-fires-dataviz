@@ -11,3 +11,4 @@ Ce dépôt contient :
 ```bash
 pip install -r requirements.txt
 python dataviz.py
+streamlit run streamlit_app.py
